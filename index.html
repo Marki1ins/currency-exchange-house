@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/coins.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa de Câmbio</title>
+  </head>
+  <body
+    class="min-h-screen bg-zinc-900 bg-cover bg-no-repeat text-white"
+    style="background-image: url(./public/background.svg)"
+  >
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-28">
+      <p class="mb-7 font-bold text-5xl sm:text-6xl leading-[79px]">
+        Casa de <span class="text-green">Câmbio</span>
+      </p>
+
+      <form class="flex flex-col mb-14">
+        <label class="mb-1.5 font-normal text-xs leading-3">
+          Selecione a moeda:
+        </label>
+        <div class="flex flex-wrap gap-3.5">
+          <select
+            id="select-moedas"
+            class="w-full sm:w-60 px-4 py-2 rounded-xl flex flex-row items-center bg-zinc-800 leading-6 text-md uppercase outline-none"
+          ></select>
+          <button
+            id="botao-pesquisar"
+            class="w-full sm:w-40 px-4 py-2 rounded-xl flex flex-row items-center justify-center bg-green font-bold text-zinc-800 leading-6 mt-2 sm:mt-0"
+          >
+            Pesquisar
+          </button>
+        </div>
+      </form>
+
+      <div
+        class="w-full sm:h-1/2 rounded-xl pt-6 pb-16 flex flex-col items-center text-center"
+        style="background-color: rgba(58, 62, 68, 0.4)"
+      >
+        <h2 class="font-bold text-2xl sm:text-3xl opacity-100 mb-8 sm:mb-24">
+          <span class="text-green">$ 1,00 dólar</span> equivale a:
+        </h2>
+
+        <div class="flex flex-col sm:flex-row items-center">
+          <h1
+            id="resultado"
+            class="font-light text-4xl sm:text-7xl md:text-9xl text-yellow mb-4 sm:mb-0"
+          ></h1>
+          <span id="moeda" class="text-xl sm:text-2xl text-yellow ml-2"></span>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
